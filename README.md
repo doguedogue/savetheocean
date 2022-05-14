@@ -8,7 +8,7 @@
 Salvar nuestro océanos poniendo un granito de arena con nuestros conocimientos en la tecnología.
 
 ## Team
-* Lucy @lukitachan
-* Christopher @chistoperez
-* Alfred @dfredude
-* Rafael @doguedogue
+* Lucy [@lukitachan](@lukitachan)
+* Christopher [@chistoperez](@chistoperez)
+* Alfred [@dfredude](@dfredude)
+* Rafael [@doguedogue](@doguedogue)
