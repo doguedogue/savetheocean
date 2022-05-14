@@ -1,14 +1,19 @@
-const {response} = require('express');
+const {response, request} = require('express');
 
-const extinctionGet = (req, res = response) => {
+const extinctionGet = (req = request, res = response) => {
+    const {q='', token=''} = req.query;
     res.status(200).json({
-        msg: 'get API'
+        msg: 'get API',
+        q,
+        token
     });
 };
 
 const extinctionPut =  (req, res = response) => {
+    const id = req.params.id;
     res.status(200).json({
-        msg: 'put API'
+        msg: 'put API',
+        id
     });
 };
 
@@ -23,8 +28,10 @@ const extinctionPost =  (req, res = response) => {
 };
 
 const extinctionDelete =  (req, res = response) => {
+    const id = req.params.id;
     res.status(200).json({
-        msg: 'delete API'
+        msg: 'delete API',
+        id
     });
 };
 
