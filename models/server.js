@@ -6,12 +6,20 @@ class Server {
         this.app = express();
         this.port = process.env.PORT;
 
+        //MW
+        this.middleware();
+
+        //Rutas
         this.routes();
     }
 
+    middleware(){
+        this.app.use ( express.static('public'));
+    }
+
     routes(){
-        this.app.get('/', (req, res) => {
-            res.send('Hello World')
+        this.app.get('/api', (req, res) => {
+            res.send('Get Method')
         })
     }
 
