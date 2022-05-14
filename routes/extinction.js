@@ -1,29 +1,14 @@
-const {Router} = require('express')
+const {Router} = require('express');
+const { extinctionGet, extinctionPut, extinctionPost, extinctionDelete } = require('../controllers/extinction.controller');
 
 const router = Router();
 
-router.get('/', (req, res) => {
-    res.status(200).json({
-        msg: 'get API'
-    });
-});
+router.get('/', extinctionGet);
 
-router.put('/', (req, res) => {
-    res.status(200).json({
-        msg: 'put API'
-    });
-});
+router.put('/', extinctionPut);
 
-router.post('/', (req, res) => {
-    res.status(200).json({
-        msg: 'post API'
-    });
-});
+router.post('/', extinctionPost);
 
-router.delete('/', (req, res) => {
-    res.status(200).json({
-        msg: 'delete API'
-    });
-});
+router.delete('/', extinctionDelete);
 
 module.exports = router;
