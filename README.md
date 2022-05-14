@@ -13,7 +13,7 @@ Salvar nuestro océanos poniendo un granito de arena con nuestros conocimientos 
 
 
 ## Team
-* Lucy [@lukitachan](@lukitachan)
-* Christopher [@chistoperez](@chistoperez)
-* Alfred [@dfredude](@dfredude)
-* Rafael [@doguedogue](@doguedogue)
+* Lucy [@lukitachan](https://github.com/lukitachan)
+* Christopher [@chistoperez](https://github.com/chistoperez)
+* Alfred [@dfredude](https://github.com/dfredude)
+* Rafael [@doguedogue](https://github.com/doguedogue)
