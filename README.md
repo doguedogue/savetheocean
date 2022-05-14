@@ -11,11 +11,7 @@ _"Salvar nuestro océanos poniendo un granito de arena con nuestros conocimiento
 <details>
 <summary>  EL RETO </summary>
 
-<br>
- 
 Elaborar un proyecto web (fullstack) que de solución escalable y ágil a una problemática relacionada con los océanos, utilizando, las tecnologías, marcos de trabajo y metodologías revisadas en Launch X.
-
-<br>
 
 Los ejes del hackathon que pueden seleccionar para desarrollar una solución son:
 * **Especies en peligro de extensión.**
@@ -29,13 +25,17 @@ Los ejes del hackathon que pueden seleccionar para desarrollar una solución son
 <br>
 
 <summary>  NUESTRA SOLUCIÓN </summary>
-<br> 
 Se elabora un proyecto con conciencia, con una visión de nuestro mundo, de nuestros océanos, que nos permite voltear a ver un problema y darle la atención necesaria.
+
 <br>
+
 Este proyecto revisa las especies en peligro de extinción a nivel mundial, mediante una API especializada que conforma la _Red List IUCN (International Union for Conservation of Nature)_ Unión Internacional para la Conservación de la Naturaleza.
+
 <br>
+
 Nuestra solución a este problema es que una vez identificada la amenaza canalizar y fortalecer mediante las organizaciones:
 
+- Protección y Conservación Pelágica AC [Pelagic Life](http://www.pelagiclife.org/)
 - Fondo Mundial para la naturaleza [WFF](https://www.wwf.org.mx/)
 - La Asociación Mexicana de Hábitats para la Interacción y Protección de Mamíferos Marinos [AMHMAR](http://www.amhmar.org.mx/)
 - Oceana [Oceana](https://mx.oceana.org/)
