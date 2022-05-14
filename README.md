@@ -1,6 +1,6 @@
 # Save the Ocean 🐋
 
-<img align='right' src="./shared/img/logo.png" alt="Save the Ocean" width="120"/>
+<img align='right' src="./shared/img/logohto.jpeg" alt="Save the Ocean" width="200" style="border-radius: 10%;"/>
 
 _"Salvar nuestro océanos poniendo un granito de arena con nuestros conocimientos en la tecnología."_
 
