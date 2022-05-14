@@ -13,8 +13,12 @@ const extinctionPut =  (req, res = response) => {
 };
 
 const extinctionPost =  (req, res = response) => {
+
+    const body = req.body
+
     res.status(200).json({
-        msg: 'post API'
+        msg: 'post API',
+        body
     });
 };
 
