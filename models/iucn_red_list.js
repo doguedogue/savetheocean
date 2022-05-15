@@ -4,9 +4,6 @@ const axios = require('axios');
 
 
 class IUCNRedList {
-    
-    historial = [];
-    dbPath = './db/database.json';
 
     constructor() {
         //this.leerDB();
@@ -30,7 +27,7 @@ class IUCNRedList {
             // console.log("intance", intance);
 
             const resp = await intance.get();
-            console.log("***** resp *******", resp);
+            // console.log("***** resp *******", resp);
             console.log("resp.data.results", resp.data.results);
 
             return resp.data.results.map( data => ({
@@ -92,42 +89,6 @@ class IUCNRedList {
         } catch (error) {
             return [];
         }
-    }
-
-
-    agregarHistorial( lugar = '' ) {
-
-        if( this.historial.includes( lugar.toLocaleLowerCase() ) ){
-            return;
-        }
-        this.historial = this.historial.splice(0,5);
-
-        this.historial.unshift( lugar.toLocaleLowerCase() );
-
-        // Grabar en DB
-        this.guardarDB();
-    }
-
-    guardarDB() {
-
-        const payload = {
-            historial: this.historial
-        };
-
-        fs.writeFileSync( this.dbPath, JSON.stringify( payload ) );
-
-    }
-
-    leerDB() {
-
-        if( !fs.existsSync( this.dbPath ) ) return;
-        
-        const info = fs.readFileSync( this.dbPath, { encoding: 'utf-8' });
-        const data = JSON.parse( info );
-
-        this.historial = data.historial;
-
-
     }
 
 }
