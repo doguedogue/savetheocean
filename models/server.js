@@ -8,6 +8,7 @@ class Server {
         this.port = process.env.PORT;
 
         this.extinctionPath = '/api/extinction';
+        this.countryPath = '/api/country';
 
         //MW
         this.middleware();
@@ -28,6 +29,8 @@ class Server {
 
     routes(){
         this.app.use(this.extinctionPath, require('../routes/extinction'));
+
+        this.app.use(this.countryPath, require('../routes/country'));
     }
 
     listen(){        

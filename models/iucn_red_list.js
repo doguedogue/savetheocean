@@ -1,6 +1,5 @@
 const fs = require('fs');
 const axios = require('axios');
-var HTMLParser = require('node-html-parser');
 
 
 
@@ -108,13 +107,10 @@ class IUCNRedList {
             //Obtiene link a redireccionar para obtener imagen
             const url_text = await this.getURLText(resp.data);
 
-            //Obtiene body de nueva URL
-            const div_img = await this.getBodyHTML(url_text);
-            
             // console.log("resp.data.results", resp.data.results);
 
-            return resp.data.results.map( data => ({
-                href: url_text,
+            return resp.data.result.map( data => ({
+                href: '',
             }));
             
         } catch (error) {
@@ -138,20 +134,6 @@ class IUCNRedList {
         return (link_html)? link_html.trim():''; 
     }
 
-    async getBodyHTML(url_html = ''){
-        url_html = 'https://www.iucnredlist.org/species/3855/2878674';
-
-        axios.get(url_html, {
-            baseURL: url_html,
-            timeout: 10000
-        }).then((resp)=>{       
-            console.log("salida = ",resp.data.indexOf('featherlight'));
-            const root = HTMLParser.parse(resp.data);
-            const clase = root.querySelectorAll('featherlight');
-            console.log("clase",clase);
-
-        });
-    }
 }
 
 
