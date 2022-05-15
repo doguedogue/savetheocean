@@ -1,35 +1,30 @@
+const { json } = require('express/lib/response');
 const { Schema, model } = require('mongoose');
 
 
 const AnimalSchema = Schema ({
-    animal: {
+    scientificName: {
         type: String,
-        required: [true, 'El animal es obligatorio'],
+        required: [true, 'El campo scientificName es obligatorio'],
     },
-    descripcion: {
+    redlistCategory: {
         type: String,
-        required: [true, 'La descripción es obligatoria']
+        required: [true, 'El campo redlistCategory es obligatorio']
     },
-    categoria: {
+    image: {
         type: String,
-        required: [true, 'La categoria es obligatoria'],
-        enum: ["DD", "LC", "NT", "VU", "EN", "CR", "EW", "EX", "LR/lc", "LR/nt", "LR/cd"]
+        required: [true, 'El campo image es obligatorio']
     },
-    longitud: {
-        type: String,
-        required: [true, 'El longitud es obligatorio']
-    },
-    latitud: {
-        type: String,
-        required: [true, 'La latitud es obligatoria']
-    },
-    url_imagen: {
-        type: String,
-        required: [true, 'La url de la imagen es obligatoria']
-    },id_IUCN: {
-        type: String,
-        required: [true, 'El id_IUCN es obligatorio']
-    }
+    gps: {
+        lat: {
+            type: String,
+            required: [true, 'El campo lat es obligatorio']
+        },
+        lng: {
+            type: String,
+            required: [true, 'El campo lng es obligatorio']
+        }
+    }    
 });
 
 module.exports = model('Animal', AnimalSchema);
