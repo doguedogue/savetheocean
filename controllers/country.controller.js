@@ -2,7 +2,7 @@ const {response, request} = require('express');
 const  wc = require('which-country');
 
 const countryGet = (req = request, res = response) => {
-    const {lng, lat} = req.body
+    const {lng, lat} = req.body;
 
     // pass [lng, lat]
     // console.log(wc([37, 55])); // RUS

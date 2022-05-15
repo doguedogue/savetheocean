@@ -1,37 +1,67 @@
 const {response, request} = require('express');
 
-const extinctionGet = (req = request, res = response) => {
-    const {q='', token=''} = req.query;
+const Animal = require('../models/animal');
+
+
+const extinctionGet = async (req = request, res = response) => {
+    console.log('Get Animals');
+    const animals = await Animal.find();
     res.status(200).json({
-        msg: 'get extintion API',
-        q,
-        token
+        result: animals
     });
 };
 
-const extinctionPut =  (req, res = response) => {
+const extinctionPut =  async (req, res = response) => {
+    console.log('Put Animals');
     const id = req.params.id;
+    const {_id, ...body} = req.body;
+
+    //Validar que exista el ID
+    try {
+        const existeAnimal = await Animal.findById( id );
+        // console.log("Salida", existeAnimal);
+    } catch(error){
+        console.log('Error', error);
+        res.status(400).json({
+            msg: `Id ${ id} no encontrado` 
+        });
+    }
+    const animal = await Animal.findByIdAndUpdate( id, body );
+
     res.status(200).json({
-        msg: 'put extintion API',
-        id
+        result: body
     });
 };
 
-const extinctionPost =  (req, res = response) => {
-
-    const body = req.body
+const extinctionPost =  async (req = request, res = response) => {
+    console.log('Post Animals');
+    const body = req.body;
+    const animal = new Animal(body);
+    await animal.save();
 
     res.status(200).json({
-        msg: 'post extintion API',
-        body
+        animal
     });
 };
 
-const extinctionDelete =  (req, res = response) => {
+const extinctionDelete =  async (req, res = response) => {
+    console.log('Delete Animals');
     const id = req.params.id;
+
+    //Validar que exista el ID
+    try {
+        const existeAnimal = await Animal.findById( id );
+        // console.log("Salida", existeAnimal);
+    } catch(error){
+        console.log('Error', error);
+        res.status(400).json({
+            msg: `Id ${ id} no encontrado` 
+        });
+    }
+    const animal = await Animal.findByIdAndDelete( id);
+
     res.status(200).json({
-        msg: 'delete extintion API',
-        id
+        msg: `Registro con id ${ id } borrado correctamente`
     });
 };
 

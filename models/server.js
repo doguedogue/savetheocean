@@ -1,5 +1,7 @@
 const express = require('express')
-const cors = require('cors')
+const cors = require('cors');
+const { dbConnection } = require('../db/config');
+const { netInfo } = require('../helpers/net');
 
 class Server {
 
@@ -10,11 +12,25 @@ class Server {
         this.extinctionPath = '/api/extinction';
         this.countryPath = '/api/country';
 
+        //net
+        this.readNet();
+
+        //Conectar a base de datos
+        this.conectarBD();
+
         //MW
         this.middleware();
 
         //Rutas
         this.routes();
+    }
+
+    async readNet(){
+        await netInfo();
+    }
+
+    async conectarBD(){
+        await dbConnection();
     }
 
     middleware(){
