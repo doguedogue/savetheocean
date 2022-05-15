@@ -55,9 +55,13 @@ Nuestra solución a este problema es que una vez identificada la amenaza canaliz
 
 | Contenido | Link |
 |:---:|:---|
-|Front-End |  <a href="https://chistoperez.github.io/HackTheOcean/" target="_blank"><img src="https://img.shields.io/badge/🔗link-FRONT_END-red?style=for-the-badge"></a> |
+|Front-End |  <a href="https://hack-the-ocean22.herokuapp.com/" target="_blank"><img src="https://img.shields.io/badge/🔗link-FRONT_END-red?style=for-the-badge"></a> |
 |Back-End| <a href="https://savetheoceanbe.herokuapp.com/" target="_blank"><img src="https://img.shields.io/badge/🔗link-BACK_END-green?style=for-the-badge"></a> |
 |API | <a href="https://documenter.getpostman.com/view/9844241/Uyxhoo1m" target="_blank"><img src="https://img.shields.io/badge/🔗link-API-blue?style=for-the-badge"></a> |
+|Repositorio Front-End |  <a href="https://github.com/chistoperez/HackTheOcean" target="_blank"><img src="https://img.shields.io/badge/🔗link-REPO_FE-red?style=for-the-badge"></a> |
+|Repositorio Back-End| <a href="https://github.com/doguedogue/savetheocean" target="_blank"><img src="https://img.shields.io/badge/🔗link-REPO_BE-green?style=for-the-badge"></a> |
+
+
 
 ### Documentación
 
