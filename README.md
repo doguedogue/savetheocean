@@ -106,9 +106,9 @@ Nuestra solución a este problema es que una vez identificada la amenaza canaliz
 
 ## Team
 
-* Lucy [@lukitachan](https://github.com/lukitachan)
-* Christopher [@chistoperez](https://github.com/chistoperez)
-* Alfred [@dfredude](https://github.com/dfredude)
-* Rafael [@doguedogue](https://github.com/doguedogue)
+* <img src="https://avatars.githubusercontent.com/u/101657514?v=4" alt="@lukitachan" width="50px"/> Lucy [@lukitachan](https://github.com/lukitachan)
+* <img src="https://avatars.githubusercontent.com/u/99354481?v=4" alt="@chistoperez" width="50px"/> Christopher [@chistoperez](https://github.com/chistoperez)
+* <img src="https://avatars.githubusercontent.com/u/72330887?v=4" alt="@dfredude" width="50px"/> Alfred [@dfredude](https://github.com/dfredude)
+* <img src="https://avatars.githubusercontent.com/u/23409026?v=4" alt="@doguedogue" width="50px"/> Rafael [@doguedogue](https://github.com/doguedogue)
 
 Todos los derechos reservados 2022 &copy;
