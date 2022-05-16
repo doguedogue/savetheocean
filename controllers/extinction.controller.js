@@ -65,9 +65,29 @@ const extinctionDelete =  async (req, res = response) => {
     });
 };
 
+
+//Recibe archivo
+const extinctionPatch =  async (req = request, res = response) => {
+    console.log('Patch Animals');
+    const body = req.body;
+    const all = body.length;
+    let reg = 0;
+    for (const item of body) {
+        const animal = new Animal(item);
+        await animal.save();
+        reg++;
+        console.log('salida', item.scientificName);
+    }
+    res.status(200).json({
+        msg: `${reg} registros guardados de ${all}`
+    });
+};
+
 module.exports = {
     extinctionDelete,
     extinctionGet,
     extinctionPost,
-    extinctionPut
+    extinctionPut,
+    extinctionPatch
 }
+

@@ -15,6 +15,10 @@ const AnimalSchema = Schema ({
         type: String,
         required: [true, 'El campo image es obligatorio']
     },
+    description: {
+        type: String,
+        required: [true, 'El campo description es obligatorio']
+    },
     gps: {
         lat: {
             type: String,
